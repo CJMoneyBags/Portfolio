@@ -8,9 +8,36 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <h1>Week 01</h1>
+    <h3>Notes</h3>
+    <ul>
+      <li>Review HTML, CSS, and Javascript</li>
+      <li>Remeber User's Info</li>
+       <ul>
+         <li>using the localStorage</li>
+         <ul>
+           <li>localStorage uses 'key', 'value' pairs where the keys are
+           used as the name and the value is the value </li>
+           <li><code>  function loadStory(){
+                 var storyName = document.getElementById("name_input").value
+                 var storyHTML = localStorage.getItem(storyName)
+                 document.getElementById("story_editor").value = storyHTML
+             }
+             function saveStory(){
+                 var storyName = document.getElementById("name_input").value
+                 var storyHTML = document.getElementById("story_editor").value
+                 localStorage.setItem(storyName, storyHTML)
+             }
+             function displayStory(){
+                 var storyHTML = document.getElementById("story_editor").value
+                 document.getElementById("story_display").innerHTML = storyHTML
+             }</code></li>
+         </ul>
+       </ul>
+    </ul>
     <h3>Challenges</h3>
     <ul>
-      <li><a href="storyEditer.html">Story Editor</a></li>
+      <li><a href="storyEditor.html">Story Editor</a></li>
     </ul>
   </body>
 </html>
