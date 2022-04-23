@@ -20,13 +20,13 @@
            used as the name and the value is the value </li>
            <li><code>  function loadStory(){
                  var storyName = document.getElementById("name_input").value
-                 var storyHTML = localStorage.getItem(storyName)
+                 var storyHTML = <span class="highlight">localStorage.getItem(storyName)</span>
                  document.getElementById("story_editor").value = storyHTML
              }
              function saveStory(){
                  var storyName = document.getElementById("name_input").value
                  var storyHTML = document.getElementById("story_editor").value
-                 localStorage.setItem(storyName, storyHTML)
+                 <span class="highlight">localStorage.setItem(storyName, storyHTML)</span>
              }
              function displayStory(){
                  var storyHTML = document.getElementById("story_editor").value
