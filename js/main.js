@@ -23,6 +23,7 @@ console.log(lists);
 
 console.log(anchor);
 var li  = document.createElement('li');
+li += "Week 01: ";
 li.appendChild(anchor);
 lists.appendChild(li);
 
