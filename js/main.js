@@ -14,6 +14,7 @@ function makeList()
   ]
 
 var lists = document.getElementById("WeekList");
+var paragraphText = "Projects:";
 console.log(lists);
 
  for (var i in links){
@@ -23,7 +24,8 @@ console.log(lists);
 
 console.log(anchor);
 var li  = document.createElement('li');
-li.appendChild("Project");
+var paragraph = document.createElement('p');
+li.appendChild(paragraphText);
 li.appendChild(anchor);
 lists.appendChild(li);
 
