@@ -27,7 +27,7 @@ function makeList()
 
 var li = document.createElement('li'),
          anchor = document.createElement('a');
-         anchor.href = a.url;
-         ancor.text = a.name;
+         anchor.href = links.url;
+         ancor.text = links.label;
          li.appendChild(anchor);
          ul.appendChild(li);
