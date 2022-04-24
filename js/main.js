@@ -22,7 +22,7 @@ var lists = document.getElementsByClassName("WeekList");
    anchor.innerText = links[i].label;
 
 
-   lists.innerHTML += <li> anchor </li>;
+   lists.innerHTML += "<li>"+ anchor +"</li>";
 
  }
 }
