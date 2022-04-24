@@ -21,9 +21,8 @@ var lists = document.getElementsByClassName("WeekList");
    anchor.href = links[i].url;
    anchor.innerText = links[i].label;
 
-   var elem = document.createElement("li");
-   elem.appendChild(anchor);
-   lists.innerHTML += elem;
+
+   lists.innerHTML += <li> anchor </li>;
 
  }
 }
