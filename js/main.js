@@ -23,7 +23,6 @@ var lists = document.getElementsByClassName("WeekList");
 
    var elem = document.createElement("li");
    elem.appendChild(anchor);
-   listItems.appendChild(elem);
    lists.innerHTML += elem;
 
  }
