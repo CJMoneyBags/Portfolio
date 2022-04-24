@@ -24,10 +24,3 @@ function makeList()
     listElement.appendChild(listItem);
   }
 }
-
-var li = document.createElement('li'),
-         anchor = document.createElement('a');
-         anchor.href = links.url;
-         anchor.text = links.label;
-         li.appendChild(anchor);
-         ul.appendChild(li);
