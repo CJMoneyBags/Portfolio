@@ -1,16 +1,18 @@
-const links = [
-  {
-    label: "Week1 notes",
-    url: "Week01/index.html"
-  },
-    {
-    label: "Week1 notes",
-    url: "Week01/index.html"
-  }
-]
+
 
 function makeList()
 {
+  const links = [
+    {
+      label: "Week1 notes",
+      url: "Week01/index.html"
+    },
+      {
+      label: "Week1 notes",
+      url: "Week01/index.html"
+    }
+  ]
+  
  var listItems = document.createElement('ol');
  for (var i in links){
    var anchor = document.createElement('a');
