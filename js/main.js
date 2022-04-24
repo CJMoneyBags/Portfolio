@@ -14,6 +14,7 @@ function makeList()
  var listItems = document.createElement('ol');
  for (var i in links){
    var anchor = document.createElement('a');
+   console.log(links[i].url);
    anchor.href = links[i].url;
    anchor.innerText = links[i].label;
 
