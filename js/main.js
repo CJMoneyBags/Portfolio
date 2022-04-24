@@ -32,6 +32,6 @@ function makeList()
 var li = document.createElement('li'),
         anchor = document.createElement('a');
         anchor.href = links.url;
-        anchor.text = linkd.label;
+        anchor.text = links.label;
         li.appendChild(anchor);
         ul.appendChild(li);
