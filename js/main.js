@@ -22,9 +22,9 @@ console.log(lists);
    anchor.innerText = links[i].label;
 
 console.log(anchor);
-   lists.innerHTML += "<li>";
-   list.append(anchor);
-   list.innerHTML +="</li>";
+var li  = document.createElement('li');
+li.appendChild(anchor);
+list.appendChild(li);
 
  }
 }
