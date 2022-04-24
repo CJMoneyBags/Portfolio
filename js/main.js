@@ -13,7 +13,9 @@ function makeList()
     }
   ]
 
- var listItems = document.createElement('ol');
+var lists = document.getElementsByClassName("WeekList");
+
+
  for (var i in links){
    var anchor = document.createElement('a');
    anchor.href = links[i].url;
@@ -22,6 +24,7 @@ function makeList()
    var elem = document.createElement("li");
    elem.appendChild(anchor);
    listItems.appendChild(elem);
-   document.getElementsByClassName('weekContainer').innerHTML = listItems;
+   lists.innerHTML += elem;
+
  }
 }
