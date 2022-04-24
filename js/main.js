@@ -12,7 +12,7 @@ function makeList()
       url: "Week01/index.html"
     }
   ]
-  
+
  var listItems = document.createElement('ol');
  for (var i in links){
    var anchor = document.createElement('a');
@@ -22,6 +22,6 @@ function makeList()
    var elem = document.createElement("li");
    elem.appendChild(anchor);
    listItems.appendChild(elem);
-   document.getElementsByClassName('weekContainer').innerHTML = elem;
+   document.getElementsByClassName('weekContainer').innerHTML = listItems;
  }
 }
