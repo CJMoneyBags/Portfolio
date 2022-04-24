@@ -25,7 +25,8 @@ console.log(lists);
 console.log(anchor);
 var li  = document.createElement('li');
 var paragraph = document.createElement('p');
-li.appendChild(paragraphText);
+paragraph.appendChild(paragraphText);
+li.appendChild(paragraph);
 li.appendChild(anchor);
 lists.appendChild(li);
 
