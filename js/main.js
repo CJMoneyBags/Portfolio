@@ -2,6 +2,10 @@ const links = [
   {
     label: "Week1 notes",
     url: "Week01/index.html"
+  },
+    {
+    label: "Week1 notes",
+    url: "Week01/index.html"
   }
 ]
 
@@ -27,7 +31,7 @@ function makeList()
 
 var li = document.createElement('li'),
         anchor = document.createElement('a');
-        anchor.href = a.url;
-        anchor.text = a.name;
+        anchor.href = links.url;
+        anchor.text = linkd.label;
         li.appendChild(anchor);
         ul.appendChild(li);
