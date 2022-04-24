@@ -14,14 +14,14 @@ function makeList()
   ]
 
 var lists = document.getElementsByClassName("WeekList");
-
+console.log(lists);
 
  for (var i in links){
    var anchor = document.createElement('a');
    anchor.href = links[i].url;
    anchor.innerText = links[i].label;
 
-
+console.log(anchor);
    lists.innerHTML += "<li>"+ anchor + "</li>";
 
  }
