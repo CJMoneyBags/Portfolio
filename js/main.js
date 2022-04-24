@@ -19,6 +19,6 @@ function makeList()
 
    var elem = document.createElement("li");
    elem.appendChild(anchor);
-   list.appendChild(elem);
+   listItems.appendChild(elem);
  }
 }
