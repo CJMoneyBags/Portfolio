@@ -13,7 +13,7 @@ function makeList()
     }
   ]
 
-var lists = document.getElementsByClassName("WeekList");
+var lists = document.getElementById("WeekList");
 console.log(lists);
 
  for (var i in links){
