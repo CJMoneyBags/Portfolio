@@ -23,7 +23,7 @@ console.log(lists);
 
 console.log(anchor);
    lists.innerHTML += "<li>";
-   list.innerHTML.append(anchor);
+   list.append(anchor);
    list.innerHTML +="</li>";
 
  }
