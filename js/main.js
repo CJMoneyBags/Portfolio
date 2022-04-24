@@ -20,6 +20,6 @@ function makeList()
    var elem = document.createElement("li");
    elem.appendChild(anchor);
    listItems.appendChild(elem);
-   document.getElementByClassName("weekContainer").innerHTML = elem;
+   document.getElementsByClassName('weekContainer').innerHTML = elem;
  }
 }
