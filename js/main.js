@@ -7,6 +7,10 @@ function makeList()
       label: "Week1 notes",
       url: "Week01/index.html"
     }
+    {
+      label: "Week2 notes",
+      url: "Week02/index.html"
+    }
   ]
 
 var lists = document.getElementById("WeekList");
