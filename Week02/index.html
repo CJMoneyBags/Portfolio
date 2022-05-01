@@ -1,28 +1,68 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Chris Bagwell's Profolio for WDD 330 BYU-Idaho">
-  <title>Chris's WDD 330 |  Week 02 </title>
+  <title>Chris's WDD 330 | Week 02 </title>
 
 </head>
-  <body>
-    <h1>Week 02</h1>
-    <a href="../index.html">back to home</a>
-    <h3>Notes</h3>
+
+<body>
+  <h1>Week 02</h1>
+  <a href="../index.html">back to home</a>
+  <h3>Notes</h3>
+  <ul>
+    <li>
+      <h4>Creating Array Literals</h4>
+    </li>
     <ul>
+      <li><code>const avengers = ['Captain America', 'Iron Man', 'Thor', 'Hulk'];</code></li>
+    </ul>
+    <li>
+      <h4>Removing Values from Arrays</h4>
+    </li>
+    <ul>
+      <li><code>delete avenger[3];</code></li>
+      <li><em>This will remove the index of 3 so it will remove 'Hulk'</em></li>
+    </ul>
+    <li>
+      <h4>Destructuring Arrays</h4>
+    </li>
+    <ul>
+      <li><code> const [x,y] = [1,2];</code></li>
+      <li>This makes swaping values easy with:</li>
+      <ul>
+        <li><code>[x,y] = [y,x];</code></li>
+      </ul>
+      <li>
+        <h4>Array Properties</h4>
+      </li>
+      <ul>
+        <li>length: shows the amount of elements</li>
+        <li>pop: <code>avengers.pop();</code> this removes the last element</li>
+        <li>shift: <code>avengers.shift();</code> this returns the first element</li>
+        <li>push: <code>avengers.push('Thor');</code> this will append a new value </li>
+        <li>unshift: <code>avengers.unshift('Captain America');</code>
+            this adds item to the begining of the list</li>
+        <li></li>
+      </ul>
 
     </ul>
-    <h3>Challenges</h3>
-    <ul>
-      <li><a href="quiz/index.html">Ninja Quiz</a></li>
 
-    </ul>
-    <h3>Team assignments</h3>
-    <ul>
-      <li><a href="week2Team/index.html">Week02 Team Assignments</a></li>
-    </ul>
 
-  </body>
+  </ul>
+  <h3>Challenges</h3>
+  <ul>
+    <li><a href="quiz/index.html">Ninja Quiz</a></li>
+
+  </ul>
+  <h3>Team assignments</h3>
+  <ul>
+    <li><a href="week2Team/index.html">Week02 Team Assignments</a></li>
+  </ul>
+
+</body>
+
 </html>
