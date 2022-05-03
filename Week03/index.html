@@ -10,25 +10,60 @@
 </head>
 
 <body>
-  <h1>Week 02</h1>
+  <h1>Week 03</h1>
   <a href="../index.html">back to home</a>
   <h3>Notes</h3>
   <ul>
-    <li><h4>Objects</h4></li>
+    <li>
+      <h4>Objects</h4>
+    </li>
     <ul>How to create an Object literal
       <code>const superman = {
-    name: 'Superman',
-    'real name': 'Clark Kent',
-    height: 75,
-    weight: 235,
-    hero: true,
-    villain: false,
-    allies: ['Batman','Supergirl','Superboy'],
-    fly() {
+        name: 'Superman',
+        'real name': 'Clark Kent',
+        height: 75,
+        weight: 235,
+        hero: true,
+        villain: false,
+        allies: ['Batman','Supergirl','Superboy'],
+        fly() {
         return 'Up, up and away!';
-    }
-};</code>
+        }
+        };</code>
     </ul>
+    <li>Accessing Properties: This is done by simply using the dot notation "superman.name"</li>
+    <li>methods are the same but use () at the end</li>
+    <li>use 'city' <em>in</em> superman: to check if a property is a member of the object</li>
+    <li>Finding all the Properties of an object:</li>
+    <ul>
+      <li><code>for(const key in superman) {
+          console.log(key + ": " + superman[key]);
+          }</code></li>
+      <li>there is also Object.Key() and Object.values() and Object.etrires()</li>
+
+    </ul>
+    <li> adding properties just make the prop and = 'whatever'</li>
+    <li>changing properties is the same just with an existing prop.</li>
+    <li>use delete poperty to delete a property</li>
+    <li>Objects can have objects inside as well</li>
+    <li>
+      <h4>Objects as pramaters</h4>
+    </li>
+    <ul>
+      <li><code>function greet({greeting,name,age}) {
+          return `${greeting}! My name is ${name} and I am ${age} years old.`;
+          }</code></li>
+      <li>the above code will make it were you can have any number of params and
+        they can be in any order.</li>
+    </ul>
+    <li>
+      <h3>JSON</h3>
+    </li>
+    <p>example: <code>const batman = '{"name": "Batman","real name":
+        "Bruce Wayne","height": 74, "weight": 210, "hero": true, "villain": false,
+        "allies": ["Robin","Batgirl","Superman"]}'</code></p>
+
+
   </ul>
 
 </body>
