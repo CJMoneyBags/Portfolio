@@ -32,7 +32,3 @@ function reset() {
 
     player1Turn = true;
 }
-
-
-
-
