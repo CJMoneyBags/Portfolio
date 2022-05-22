@@ -10,20 +10,41 @@
 </head>
 
 <body>
-  <h1>Week 04</h1>
+  <h1>Week 05</h1>
   <a href="../index.html">back to home</a>
   <h3>Notes</h3>
+  <h4>Stack traces</h4>
+  <p>
+    An exception will also produce a stack trace.
+    This is a sequence of functions or method calls that lead to the point
+    where the error occurred. It’s often not just a single function or method
+    call that causes an error. A stack trace will work backwards from the point
+    at which the error occurred to identify the original function or method
+    that started the sequence. The example below shows how a stack trace
+    can help you find where an error originates from:
+  </p>
+  <code>function three(){ unicorn(); }
+    function two(){ three(); }
+    function one(){ two(); }
+    one();
 
+    << index.html:13 Uncaught ReferenceError: unicorn is not defined at three (index.html:13) at two (index.html:17) at one (index.html:21) at index.html:24`</code>
 
-  <h3>Challenges</h3>
-  <ul>
-    <li><a href="quiz/index.html">Ninja Quiz</a></li>
+      <p>In this example, we have three functions: function one() invokes
+        function two(), which then invokes function three(). Function three()
+        then invokes the unicorn() function that doesn't exist and causes an
+        error. We can use the stack trace to work backwards and see that this
+        error was caused by invoking the function one() in the first place.
+      </p>
 
-  </ul>
-  <h3>Team assignments</h3>
-  <ul>
-    <li><a href="week5Team/index.html">Week05 Team Assignments</a></li>
-  </ul>
+      <h3>Challenges</h3>
+      <ul>
+        <li><a href="todo/todo.html">To do</a></li>
+      </ul>
+      <h3>Team assignments</h3>
+      <ul>
+        <li><a href="week5Team/index.html">Week05 Team Assignments</a></li>
+      </ul>
 
 </body>
 
