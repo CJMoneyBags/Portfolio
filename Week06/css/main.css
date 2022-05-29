@@ -1,0 +1,132 @@
+
+body {
+  box-sizing: border-box;
+  display: block;
+  margin: 8px;
+  font-family: sans-serif;
+}
+
+
+main,
+#new-task-box {
+  max-width: 400px;
+  margin: auto;
+}
+
+
+header {
+  width: 100%;
+  text-align: center;
+}
+
+#new-task-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 8px;
+    width: calc(100% - 16px);
+    border: 2px solid black;
+    z-index: 10;
+  }
+  
+  
+  #new-task-content {
+    width: calc(100% - 2rem);
+  }
+  
+  
+  #new-task-btn {
+    font-size: 1.5rem;
+    padding: 0;
+    background-color: #55e3ff;
+  }
+
+  
+#task-filter {
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+  }
+  
+  
+  #tasks-left {
+    text-align: center;
+    flex: 4 4 auto;
+  }
+  
+  
+  .task-filter-btn {
+    border: none;
+    border-left: 1px solid grey;
+    background-color: #dddddd;
+    color: black;
+  }
+  
+  
+  .task-filter-btn:disabled {
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #8c8c8c;
+    color: rgb(92, 92, 92);
+  }
+  
+  
+  .task-filter-btn:disabled + .task-filter-btn {
+    border-left: none;
+  }
+  
+  
+  #task-filter-all {
+    flex: 1 1 auto;
+  }
+  
+  
+  #task-filter-active {
+    flex: 2 2 auto;
+  }
+  
+  
+  #task-filter-completed {
+    flex: 3 3 auto;
+  }
+
+  
+.todo-item {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+  }
+  
+  
+  .task-content {
+    display: inline-block;
+    width: calc(100% - 50px);
+    min-height: 20px;
+  }
+  
+  
+  .completed-task {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  .task-checkbox,
+  .task-remove-btn {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 4px;
+  }
+  
+  
+  .task-remove-btn {
+    font-size: 1rem;
+    background-color: #ff0202;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    cursor: pointer;
+  }
