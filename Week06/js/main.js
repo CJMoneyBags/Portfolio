@@ -23,7 +23,6 @@ function reloadTasks() {
   tasksLeft.innerHTML = numIncomplete + " tasks left";
 }
 
-
 function recreateTaskEvents() {
   setClassOnInput("task-checkbox", function () {
     var taskID = this.dataset.taskId;
