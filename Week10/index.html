@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chris Bagwell's Profolio for WDD 330 BYU-Idaho">
+  <title>Chris's WDD 330 | Week 10 </title>
+
+</head>
+
+<body>
+  <h1>Week 10</h1>
+  <a href="../index.html">back to home</a>
+  <h3>Notes</h3>
+  <form id="register" method="post">
+      <header>
+      <h1>Sign Me Up!</h1>
+      <p>I would like to receive your fine publication.</p>
+      </header>
+      <ul>
+      <li>
+          <label for="register-name">My name is:</label>
+          <input type="text" id="register-name" name="name">
+      </li>
+      <li>
+          <label for="address">My email address is:</label>
+          <input type="text" id="address" name="address">
+      </li>
+      <li>
+          <label for="url">My website is located at:</label>
+          <input type="text" id="url" name="url">
+      </li>
+      <li>
+          <label for="password">I would like my password to be:</label>
+          <p>(at least 6 characters, no spaces)</p>
+          <input type="password" id="password" name="password">
+      </li>
+      <li>
+          <label for="rating">On a scale of 1 to 10, my knowledge of
+  ↵HTML5 is:</label>
+          <input type="text" name="rating" id="rating">
+      </li>
+      <li>
+          <label for="startdate">Please start my subscription on:
+  ↵</label>
+          <input type="text" id="startdate" name="startdate">
+      </li>
+      <li>
+          <label for="quantity">I would like to receive <input
+  ↵type="text" name="quantity" id="quantity"> copies of <cite>
+  ↵The HTML5 Herald</cite>.</label>
+      </li>
+      <li>
+          <label for="upsell">Also sign me up for <cite>The CSS3
+  ↵Chronicle</cite></label>
+          <input type="checkbox" id="upsell" name="upsell" value="CSS
+  ↵Chronicle">
+      </li>
+      <li>
+          <input type="submit" id="register-submit" value="Send Post
+  ↵Haste">
+      </li>
+      </ul>
+  </form>
+  <form id="example">
+      <p>
+        <fieldset>
+          <legend>Do you have a driver's license?<abbr title="This field is mandatory" aria-label="required">*</abbr></legend>
+          <!-- While only one radio button in a same-named group can be selected at a time,
+               and therefore only one radio button in a same-named group having the "required"
+               attribute suffices in making a selection a requirement -->
+          <input type="radio" required name="driver" id="r1" value="yes"><label for="r1">Yes</label>
+          <input type="radio" required name="driver" id="r2" value="no"><label for="r2">No</label>
+        </fieldset>
+      </p>
+      <p>
+        <label for="n1">How old are you?</label>
+        <!-- The pattern attribute can act as a fallback for browsers which
+             don't implement the number input type but support the pattern attribute.
+             Please note that browsers that support the pattern attribute will make it
+             fail silently when used with a number field.
+             Its usage here acts only as a fallback -->
+        <input type="number" min="12" max="120" step="1" id="n1" name="age"
+               pattern="\d+">
+      </p>
+      <p>
+        <label for="t1">What's your favorite fruit?<abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+        <input type="text" id="t1" name="fruit" list="l1" required
+               pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range">
+        <datalist id="l1">
+          <option>Banana</option>
+          <option>Cherry</option>
+          <option>Apple</option>
+          <option>Strawberry</option>
+          <option>Lemon</option>
+          <option>Orange</option>
+        </datalist>
+      </p>
+      <p>
+        <label for="t2">What's your e-mail address?</label>
+        <input type="email" id="t2" name="email">
+      </p>
+      <p>
+        <label for="t3">Leave a short message</label>
+        <textarea id="t3" name="msg" maxlength="140" rows="5"></textarea>
+      </p>
+      <p>
+        <button>Submit</button>
+      </p>
+    </form>
+    <form>
+      <label for="mail">I would like you to provide me with an e-mail address:</label>
+      <input type="email" id="mail" name="mail">
+      <button>Submit</button>
+    </form>
+
+      <h3>Challenges</h3>
+      <ul>
+
+      </ul>
+      <h3>Team assignments</h3>
+      <ul>
+        <a href="w10TeamActivity/index.html">Team Activity</a>
+      </ul>
+
+</body>
+
+</html>
