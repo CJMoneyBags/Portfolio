@@ -47,7 +47,7 @@ function inputChange() {
     forecastOutput.style.display = 'none';
     zip = parseInt(document.getElementById('zipCode').value);
     zipInput.focus();
-  
+
     fetch(weatherURL + zip + weatherAPI)
         .then(response => {
             outputDiv.innerHTML = 'You need to put in a valid Zip';
@@ -111,7 +111,6 @@ function weather() {
         })
         .catch(error => console.log('There was an error:', error))
 }
-data.dt
 
 function forecast() {
     zip = parseInt(document.getElementById('zipCode').value);
@@ -131,7 +130,7 @@ function forecast() {
             let output = `<h2>Forecast for  ${data.city.name}</h2>`;
             outputDiv.innerHTML = output += `
             <ul>
-            <li>Sunrise: ${new Date(data.city.sunrise*1000).toLocaleString()}</li>  
+            <li>Sunrise: ${new Date(data.city.sunrise*1000).toLocaleString()}</li>
             <li>Sunset: ${new Date(data.city.sunset*1000).toLocaleString()}</li>
             </ul>
             <br>
