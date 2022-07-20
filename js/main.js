@@ -37,7 +37,7 @@ function makeList()
   },
   {
   label: "Week14 Final project",
-  url: "Week10/index.html"
+  url: "Week14/index.html"
 }
   ]
 
