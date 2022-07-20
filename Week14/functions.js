@@ -20,8 +20,7 @@ function showPosition(position) {
 
 export function datetUpdate() {
     let dateTime = new Date();
-    document.getElementById('dateTime').innerHTML =
-        "At Last Update: " + (dateTime.getMonth() + 1) + "/" +
+    document.getElementById('dateTime').innerHTML ="At Last Update: " + (dateTime.getMonth() + 1) + "/" +
         dateTime.getDate() + "/" +
         dateTime.getFullYear() + " at " +
         dateTime.toLocaleTimeString();
@@ -46,4 +45,3 @@ export function windDirection(degrees) {
     const windDir = windArray[Math.ceil(degrees / 22.5) % 16];
     return windDir;
 }
-
