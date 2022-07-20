@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Application | Final Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>Weather Application</h1>
+            <a href="../index.html">Back to home</a>
+        </nav>
+    </header>
+   
+    <div class="container">
+        <div id="loadInfo">
+            <div id="icon"><img src='' alt="image of weather" id="tempIcon"></div>
+            <br>
+            <div id="zipCheck">Zip Code Required</div> <br>
+            <div><input type="number" id="zipCode" placerholder="84015" maxlength="5" required></div>
+            <div id="buttons">
+                <button class="button" id="weather">Weather</button>
+                <button class="button" id="forecast">Forecast</button>
+        
+            </div>
+            <br><br>
+            <div id="output"></div>
+            <div id="forecastOutput"></div>
+            <br>
+
+        </div>
+    </div> 
+    <footer>
+        <h5 id="footer">Chris Bagwell - 2022 BYUI</h5>
+    </footer>
+    <script src="main.js" type="module"></script>
+</body>
+</html>
