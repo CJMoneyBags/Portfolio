@@ -1,5 +1,4 @@
 import {
-    datetUpdate,
     getLocation,
     inputCheck,
     windDirection
@@ -43,7 +42,6 @@ zipInput.addEventListener('input', () => {
 
 function inputChange() {
     getLocation('output');
-    datetUpdate();
     forecastOutput.style.display = 'none';
     zip = parseInt(document.getElementById('zipCode').value);
     zipInput.focus();

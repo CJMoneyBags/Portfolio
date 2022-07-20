@@ -18,13 +18,14 @@ function showPosition(position) {
 
 }
 
-export function datetUpdate() {
-    let dateTime = new Date();
-    document.getElementById('dateTime').innerHTML ="At Last Update: " + (dateTime.getMonth() + 1) + "/" +
-        dateTime.getDate() + "/" +
-        dateTime.getFullYear() + " at " +
-        dateTime.toLocaleTimeString();
-}
+// export function datetUpdate() {
+//   let dateTime = new Date();
+//   document.getElementById('dateTime').innerHTML =
+//       "At Last Update: " + (dateTime.getMonth() + 1) + "/" +
+//       dateTime.getDate() + "/" +
+//       dateTime.getFullYear() + " at " +
+//       dateTime.toLocaleTimeString();
+// }
 
 export function inputCheck() {
     const regex = (/\d{5}/g);
