@@ -126,20 +126,20 @@ function forecast() {
         .then((data) => {
             // console.log(data);
             let output = `<h2>Forecast for  ${data.city.name}</h2>`;
+            const date = new Date(data.list[i].dt*1000).toLocaleString();
             outputDiv.innerHTML = output += `
             <ul>
-            <li>Sunrise: ${new Date(data.city.sunrise*1000).toLocaleString()}</li>
-            <li>Sunset: ${new Date(data.city.sunset*1000).toLocaleString()}</li>
+            <li>Sunrise: ${date}</li>
+            <li>Sunset: ${date}</li>
             </ul>
             <br>
         `;
             for (let i = 0; i < 5; i++) {
                const date = new Date(data.list[i].dt*1000).toLocaleString();
-               const options = { weekday: 'long'};
                 forecastOutput.innerHTML += `
             <div class='forecast'>
             <ul>
-            <li><strong>${new Intl.DateTimeFormat('en-US', options).format(date)}</strong></li><br>
+            <li><strong>${date}</strong></li><br>
             <li>Low: <strong>${data.list[i].main.temp_min}°F</strong></li>
             <li>High: <strong>${data.list[i].main.temp_max}°F</strong></li>
             <li>Description: <strong>${data.list[i].weather[0].description} </strong></li>
