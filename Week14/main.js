@@ -12,7 +12,6 @@ const weatherAPI = `,us&units=imperial&APPID=cec6688f1b2e49611b637187174f926d`;
 const forecastURL = 'https://api.openweathermap.org/data/2.5/forecast?zip=';
 const forecastAPI = ',us&units=imperial&cnt=5&appid=cec6688f1b2e49611b637187174f926d';
 
-
 const apiWeather = document.getElementById('weather');
 const apiForecast = document.getElementById('forecast');
 
@@ -101,6 +100,7 @@ function weather() {
             <li>Weather Description <strong>${ data.weather[0].description} </strong></li>
             <li>Currently <strong>${data.main.temp }°F</strong></li>
             <li>Humidity at <strong> ${ data.main.humidity }% </strong></li>
+            <li>Current visibility <strong>${ data.visibility}</strong></li>
             <li>Wind speed <strong> ${ data.wind.speed} MPH</strong></li>
             <li>Wind Direction<strong> ${windDirection(data.wind.deg)}</strong></li>
             </ul>
@@ -123,13 +123,11 @@ function forecast() {
         })
         .then(response => response.json())
         .then((data) => {
-            // console.log(data);
             let output = `<h2>Forecast for  ${data.city.name}</h2>`;
-            const date = new Date(data.list[i].dt*1000).toLocaleString();
             outputDiv.innerHTML = output += `
             <ul>
-            <li>Sunrise: ${date}</li>
-            <li>Sunset: ${date}</li>
+            <li>Sunrise: ${new Date(data.city.sunrise*1000).toLocaleString()}</li>
+            <li>Sunset: ${new Date(data.city.sunset*1000).toLocaleString()}</li>
             </ul>
             <br>
         `;
