@@ -98,9 +98,8 @@ function weather() {
       outputDiv.innerHTML = output +=
         `<ul>
             <li>Weather Description <strong>${ data.weather[0].description} </strong></li>
-            <li>Currently <strong>${data.main.temp }°F</strong></li>
+            <li>Current Temp <strong>${data.main.temp }°F</strong></li>
             <li>Humidity at <strong> ${ data.main.humidity }% </strong></li>
-            <li>Current visibility <strong>${ data.visibility}</strong></li>
             <li>Wind speed <strong> ${ data.wind.speed} MPH</strong></li>
             <li>Wind Direction<strong> ${windDirection(data.wind.deg)}</strong></li>
             </ul>
