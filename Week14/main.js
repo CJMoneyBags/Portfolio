@@ -1,7 +1,7 @@
 import {
-    getLocation,
-    inputCheck,
-    windDirection
+  getLocation,
+  inputCheck,
+  windDirection
 } from './functions.js';
 
 let latitude, longitude, zip;
@@ -23,80 +23,80 @@ forecastOutput.style.display = 'none';
 let zipInput = document.getElementById('zipCode');
 
 window.addEventListener('change', () => {
-    inputChange()
+  inputChange()
 }, false);
 
 
 apiWeather.addEventListener('click', () => {
-    weather()
+  weather()
 }, false);
 
 apiForecast.addEventListener('click', () => {
-    forecast()
+  forecast()
 }, false);
 
 zipInput.addEventListener('input', () => {
-    inputCheck()
+  inputCheck()
 }, false);
 
 function inputChange() {
-    getLocation('output');
-    forecastOutput.style.display = 'none';
-    zip = parseInt(document.getElementById('zipCode').value);
-    zipInput.focus();
+  getLocation('output');
+  forecastOutput.style.display = 'none';
+  zip = parseInt(document.getElementById('zipCode').value);
+  zipInput.focus();
 
-    fetch(weatherURL + zip + weatherAPI)
-        .then(response => {
-            outputDiv.innerHTML = 'You need to put in a valid Zip';
-            if (response.ok) {
-                return response;
-            }
-            throw Error(response.statusText)
-        })
-        .then(response => response.json())
-        .then((data) => {
-            latitude = data.coord.lat;
-            longitude = data.coord.lon;
-            document.getElementById('tempIcon').setAttribute('alt', data.weather[0].description);
-            let dayNight = data.weather[0].icon;
-            dayNight.slice(-1);
-            if (dayNight.slice(-1) == 'n') {
-                document.getElementById('icon').style.backgroundColor = "white";
-            }
-            outputDiv.innerHTML = `<div id='initialLoad'>${data.main.temp}°F</div>`
-            return fetch(`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`)
-        })
-        .then(response => {
-            if (response.ok) {
-                document.getElementById('icon').style.display = 'block';
-                return response;
-            }
-            throw Error(response.statusText);
-        })
-        .then(response => response.blob())
-        .then((img) => {
-            document.getElementById('tempIcon').src = URL.createObjectURL(img);
-        })
-        .catch(error => console.log('There was an error:', error))
+  fetch(weatherURL + zip + weatherAPI)
+    .then(response => {
+      outputDiv.innerHTML = 'You need to put in a valid Zip';
+      if (response.ok) {
+        return response;
+      }
+      throw Error(response.statusText)
+    })
+    .then(response => response.json())
+    .then((data) => {
+      latitude = data.coord.lat;
+      longitude = data.coord.lon;
+      document.getElementById('tempIcon').setAttribute('alt', data.weather[0].description);
+      let dayNight = data.weather[0].icon;
+      dayNight.slice(-1);
+      if (dayNight.slice(-1) == 'n') {
+        document.getElementById('icon').style.backgroundColor = "white";
+      }
+      outputDiv.innerHTML = `<div id='initialLoad'>${data.main.temp}°F</div>`
+      return fetch(`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`)
+    })
+    .then(response => {
+      if (response.ok) {
+        document.getElementById('icon').style.display = 'block';
+        return response;
+      }
+      throw Error(response.statusText);
+    })
+    .then(response => response.blob())
+    .then((img) => {
+      document.getElementById('tempIcon').src = URL.createObjectURL(img);
+    })
+    .catch(error => console.log('There was an error:', error))
 }
 
 
 function weather() {
-    zip = parseInt(document.getElementById('zipCode').value);
-    forecastOutput.style.display = 'none';
-    fetch(weatherURL + zip + weatherAPI)
-        .then(response => {
-            outputDiv.innerHTML = 'You need to put in a valid Zip';
-            if (response.ok) {
-                return response;
-            }
-            throw Error(response.statusText);
-        })
-        .then(response => response.json())
-        .then((data) => {
-            let output = `<h2>Weather Conditions for <strong>${data.name}</strong> </h2>`;
-            outputDiv.innerHTML = output +=
-                `<ul>
+  zip = parseInt(document.getElementById('zipCode').value);
+  forecastOutput.style.display = 'none';
+  fetch(weatherURL + zip + weatherAPI)
+    .then(response => {
+      outputDiv.innerHTML = 'You need to put in a valid Zip';
+      if (response.ok) {
+        return response;
+      }
+      throw Error(response.statusText);
+    })
+    .then(response => response.json())
+    .then((data) => {
+      let output = `<h2>Weather Conditions for <strong>${data.name}</strong> </h2>`;
+      outputDiv.innerHTML = output +=
+        `<ul>
             <li>Weather Description <strong>${ data.weather[0].description} </strong></li>
             <li>Currently <strong>${data.main.temp }°F</strong></li>
             <li>Humidity at <strong> ${ data.main.humidity }% </strong></li>
@@ -105,35 +105,35 @@ function weather() {
             <li>Wind Direction<strong> ${windDirection(data.wind.deg)}</strong></li>
             </ul>
             `
-        })
-        .catch(error => console.log('There was an error:', error))
+    })
+    .catch(error => console.log('There was an error:', error))
 }
 
 function forecast() {
-    zip = parseInt(document.getElementById('zipCode').value);
-    forecastOutput.innerHTML = '';
-    forecastOutput.style.display = 'flex';
-    fetch(forecastURL + zip + forecastAPI)
-        .then(response => {
-            outputDiv.innerHTML = 'You need to put in a valid Zip';
-            if (response.ok) {
-                return response;
-            }
-            throw Error(response.statusText);
-        })
-        .then(response => response.json())
-        .then((data) => {
-            let output = `<h2>Forecast for  ${data.city.name}</h2>`;
-            outputDiv.innerHTML = output += `
+  zip = parseInt(document.getElementById('zipCode').value);
+  forecastOutput.innerHTML = '';
+  forecastOutput.style.display = 'flex';
+  fetch(forecastURL + zip + forecastAPI)
+    .then(response => {
+      outputDiv.innerHTML = 'You need to put in a valid Zip';
+      if (response.ok) {
+        return response;
+      }
+      throw Error(response.statusText);
+    })
+    .then(response => response.json())
+    .then((data) => {
+      let output = `<h2>Forecast for  ${data.city.name}</h2>`;
+      outputDiv.innerHTML = output += `
             <ul>
             <li>Sunrise: ${new Date(data.city.sunrise*1000).toLocaleString()}</li>
             <li>Sunset: ${new Date(data.city.sunset*1000).toLocaleString()}</li>
             </ul>
             <br>
         `;
-            for (let i = 0; i < 5; i++) {
-               const date = new Date(data.list[i].dt*1000).toLocaleString();
-                forecastOutput.innerHTML += `
+      for (let i = 0; i < 5; i++) {
+        const date = new Date(data.list[i].dt * 1000).toLocaleString();
+        forecastOutput.innerHTML += `
             <div class='forecast'>
             <ul>
             <li><strong>${date}</strong></li><br>
@@ -145,7 +145,7 @@ function forecast() {
             <hr>
             </div>
             `;
-            }
-        })
-        .catch(error => console.log('There was an error:', error))
+      }
+    })
+    .catch(error => console.log('There was an error:', error))
 }
