@@ -122,7 +122,7 @@ function forecast() {
     })
     .then(response => response.json())
     .then((data) => {
-      let output = `<h2>Forecast for  ${data.city.name}</h2>`;
+      let output = `<h2>Forecast for  ${data.city.name}</h2> every 3 hours`;
       outputDiv.innerHTML = output += `
             <ul>
             <li>Sunrise: ${new Date(data.city.sunrise*1000).toLocaleString()}</li>
